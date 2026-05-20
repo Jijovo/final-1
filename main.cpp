@@ -33,10 +33,16 @@ int main() {
         }
     }
 
+    //Milestone 4: polish output
+    cout << "Aiport Map" << endl;
+    cout << "----------" << endl;
+    cout << "Airport Code - Traffic Count" << endl;
     for (auto it = airportMap.begin(); it != airportMap.end(); it++) {
         cout << it->first << " " << it->second << endl;
     }
+    cout << endl << "----------" << endl;
     cout << endl << "Busiest airport: " << maxAirport << " - " << max << endl;
+    cout << endl << "----------" << endl;
 
     printRange(airportMap, 10, 20);
     printRange(airportMap, 30, 40);
@@ -53,4 +59,5 @@ void printRange(map<string, int> m, int r1, int r2) {
             cout << it->first << " " << it->second << endl;
         }
     }
+    cout << endl << "----------" << endl;
 }
