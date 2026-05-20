@@ -34,7 +34,7 @@ int main() {
     for (auto it = airportMap.begin(); it != airportMap.end(); it++) {
         cout << it->first << " " << it->second << endl;
     }
-    cout <<
+    cout << endl << "Busiest airport: " << maxAirport << " - " << max << endl;
 
     return 0;
 }
