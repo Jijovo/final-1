@@ -21,9 +21,20 @@ int main() {
     }
     fin.close();
 
+    //Milesone 2, find the busiest airport
+    int max = 0;
+    string maxAirport;
+    for (auto it = airportMap.begin(); it != airportMap.end(); it++) {
+        if (it->second > max) {
+            max = it->second;
+            maxAirport = it->first;
+        }
+    }
+
     for (auto it = airportMap.begin(); it != airportMap.end(); it++) {
         cout << it->first << " " << it->second << endl;
     }
+    cout <<
 
     return 0;
 }
