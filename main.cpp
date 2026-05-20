@@ -5,6 +5,8 @@
 #include <fstream>
 using namespace std;
 
+void printRange(map<string, int> m, int r1, int r2);
+
 int main() {
     //Milestone 1, create std::map to store airport codes paired with traffic count (number of times it is listed in file)
     map<string, int> airportMap;
@@ -36,5 +38,19 @@ int main() {
     }
     cout << endl << "Busiest airport: " << maxAirport << " - " << max << endl;
 
+    printRange(airportMap, 10, 20);
+    printRange(airportMap, 30, 40);
+
     return 0;
+}
+
+//Milestone 3, print a range of airports
+void printRange(map<string, int> m, int r1, int r2) {
+    cout << endl << "All airports in range: " << r1 << " - " << r2 << endl;
+    
+    for (auto it = m.begin(); it != m.end(); it++) {
+        if (it->second >= r1 && it->second <= r2) {
+            cout << it->first << " " << it->second << endl;
+        }
+    }
 }
